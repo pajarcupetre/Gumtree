@@ -1,0 +1,27 @@
+plugins {
+    id 'application'
+}
+
+group 'com'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+
+apply plugin : "java"
+ext {
+    javaMainClass = "App"
+}
+
+application {
+    mainClassName = javaMainClass
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'org.apache.commons', name: 'commons-csv', version: '1.1'
+}
