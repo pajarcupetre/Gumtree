@@ -1,26 +1,32 @@
-# Technical Assignment for Backend
+# Details
+The adrress book is loaded into memory and using the mothods from AddressBookHandler we can interogate the content:
+# public static AddressBook loadAddress(String fileInput)
+  Input: input file
+  Returns: AddressBook instance populated
+# public static long genderCount(AddressBook addressBook, String gender)
+  Input: AddressBook and gender defined by a string
+  Ouput: the count on that gender
+  example usage: genderCount(addressBook, "male")
 
-## The task
+# public static User getOldestUser(AddressBook addressBook)
+  Input: AddressBook 
+  Ouput: Oldest user using min by birthdate
+  
+# public static long countDaysBetWeen(AddressBook addressBook, String userOne, String userTwo)
+  Input: AddressBook, users by name
+  Output: days computed using the values searched by name in HashMap that is backing up AddressBook
 
-Your task is to develop a small java application. We need you to build your application in your own GitHub repository.  Please do not fork our repository to create your project.  Once you are done, send us a link to your repository.
+## How to run
+chmod +X gradlew
+./gradlew run
 
-Please allow yourself at least 1 hour of uninterrupted time for this task, but feel free to spend as much time on the task as you like and make the solution and the code as perfect as you like.
+example run:
+./gradlew run
 
-## The application
+> Task :run
+Male count: 3
+Oldest User:User{name='Wes Jackson', gender='Male', birthday=1974-08-14}
+Bill number of days older than Paul:2862
 
-Your application needs to read the attached AddressBook file and answer the following questions:
-
-1. How many males are in the address book?
-2. Who is the oldest person in the address book?
-3. How many days older is Bill than Paul?
-
-Some insights into what we'll be looking for (and what we will not):
-
-- Feel free to use any dependency management and build tools eg maven or gradle
-- Please do not use database, we are more interested in your Java skills than your SQL skills
-- Feel free to commit as often as you'd like. The more commits the better! Please commit at least once within the first hour
-- It's better to complete 1 task than to start 3
-- Feel free to use any java libraries you feel appropriate
-- We will be looking at how you approach the task (e.g. how you break it into sub-tasks) and how you structure your code to answer the questions
-
-Good Luck!
+BUILD SUCCESSFUL in 2s
+3 actionable tasks: 3 executed
